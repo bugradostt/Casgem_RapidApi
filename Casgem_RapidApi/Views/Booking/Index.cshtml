@@ -1,0 +1,58 @@
+﻿@model List<HotelListViewModel.Result>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<form method="get">
+
+    <div class="row">
+
+        <div class="col-md-6 mb-2">
+            <input type="text" name="adult" class="form-control" placeholder="Yetişkin sayısı" />
+        </div>
+
+
+        <div class="col-md-6 mb-2">
+            <input type="text" name="child" class="form-control" placeholder="Çocuk sayısı sayısı" />
+        </div>
+
+
+        <div class="col-md-6 mb-2">
+            <input type="text" name="checkindate" class="form-control" placeholder="Giriş Tarihi" />
+        </div>
+
+        <div class="col-md-6 mb-2">
+            <input type="text" name="checkoutdate" class="form-control" placeholder="Çıkış Tarihi" />
+        </div>
+
+        <div class="col-md-6 mb-2">
+            <input type="text" name="roomnumber" class="form-control" placeholder="Oda sayısı" />
+        </div>
+
+        <div class="col-md-6 mb-2">
+            <input type="text" name="cityID" class="form-control" placeholder="Şehir ıd" />
+        </div>
+
+
+        <div class="col-md-6 mb-2">
+        <input type="submit" class="btn btn-success" value="Hotel Ara" />
+        </div>
+
+        
+    </div>
+</form>
+
+<table class="table table-striped">
+
+  
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.name</td>
+        </tr>
+
+    }
+
+</table>

@@ -1,0 +1,44 @@
+﻿@model List<Casgem_RapidApi.Models.ImdbMovieListViewModal>
+@{
+    Layout = null;
+}
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+
+    <table class="table table-striped">
+
+
+
+        <tr>
+            <th>#</th>
+            <th>Film Adı</th>
+            <th>Film Puanı</th>
+            <th>Yapım Yılı</th>
+        </tr>
+
+        @{
+            int a = 1;
+        }
+        @foreach (var i in Model)
+        {
+            <tr>
+                <th>@a</th>
+                <td>@i.title</td>
+                <td>@i.rating</td>
+                <td>@i.year</td>
+            </tr>
+
+            a++;
+
+        }
+
+    </table>
+
+
+</div>
+
+

@@ -1,0 +1,46 @@
+﻿@model List<Casgem_RapidApi.Models.ExchangeViewModel.Exchange_Rates>
+@{
+    Layout = null;
+}
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<form method="get">
+    <input type="text" name="s" />
+    <input  type="submit" value="değer"/>
+</form>
+
+<div class="container">
+
+    <table class="table table-striped">
+
+
+
+        <tr>
+            <th>#</th>
+            <th>Döviz</th>
+            <th>Miktar</th>
+        </tr>
+
+        @{
+            int a = 1;
+        }
+        @foreach (var i in Model)
+        {
+            <tr>
+                <th>@a</th>
+                <td>@i.currency</td>
+                <td>@i.exchange_rate_buy</td>
+            </tr>
+
+            a++;
+
+        }
+
+    </table>
+
+
+</div>
+
+
